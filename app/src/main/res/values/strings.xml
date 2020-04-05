@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Jetpack Dogs</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="list_fragment">List Fragment</string>
+    <string name="detail_fragment">Detail Fragment</string>
+    <string name="an_error_occured_when_loading_data">An error occured when loading data</string>
+</resources>
