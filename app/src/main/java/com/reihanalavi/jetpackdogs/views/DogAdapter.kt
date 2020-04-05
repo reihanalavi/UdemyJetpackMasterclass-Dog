@@ -1,11 +1,14 @@
 package com.reihanalavi.jetpackdogs.views
 
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.reihanalavi.jetpackdogs.R
 import com.reihanalavi.jetpackdogs.models.Dog
+import com.reihanalavi.jetpackdogs.utils.getProgressDrawable
+import com.reihanalavi.jetpackdogs.utils.loadImage
 import kotlinx.android.synthetic.main.items_dog.view.*
 import org.jetbrains.anko.sdk25.coroutines.onClick
 
@@ -20,8 +23,10 @@ class DogAdapter(private val dogs: ArrayList<Dog>, private val listener: (Dog) -
 
     class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
 
+        @SuppressLint("SetTextI18n")
         fun bindData(data: Dog, listener: (Dog) -> Unit) {
             itemView.items_textView.text = "${data.dogBreed} | ${data.lifeSpan}"
+            itemView.items_imageView.loadImage(data.imageUrl, getProgressDrawable(itemView.context))
 
             itemView.onClick {
                 listener(data)
