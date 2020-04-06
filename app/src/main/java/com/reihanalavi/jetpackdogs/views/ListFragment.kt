@@ -53,7 +53,7 @@ class ListFragment : Fragment() {
             recyclerView_list.visibility = View.INVISIBLE
             progressBar_list.visibility = View.INVISIBLE
             textView_list_error.visibility = View.VISIBLE
-            viewModel.refresh()
+            viewModel.refreshCache()
             swipeRefresh_list.isRefreshing = false
         }
 
